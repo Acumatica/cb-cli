@@ -1,15 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CommandLine;
+using PX.Api.ContractBase.Maintenance.Cli.Verbs;
 
 namespace PX.Api.ContractBase.Maintenance.Cli
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
+            return Parser.Default
+                .ParseArguments(args,
+                    typeof(GetSchema),
+                    typeof(PutSchema)
+                    )
+                .MapResult(
+                    (GetSchema opts) => 0,
+                    (PutSchema opts) => 0,
+                    errors => 2
+                );
         }
     }
 }

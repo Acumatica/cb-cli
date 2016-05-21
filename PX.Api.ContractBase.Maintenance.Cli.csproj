@@ -49,8 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Verbs\GetSchema.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Verbs\PutSchema.cs" />
     <Compile Include="Service References\Maintenance530\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
