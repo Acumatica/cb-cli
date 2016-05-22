@@ -14,7 +14,7 @@ namespace PX.Api.ContractBase.Maintenance.Cli
                     typeof(PutSchema)
                     )
                 .MapResult(
-                    (GetSchema opts) => opts.Invoke(),
+                    (GetSchema opts) => opts.InvokeAsync().Result,
                     (PutSchema opts) => 0,
                     errors => 2
                 );

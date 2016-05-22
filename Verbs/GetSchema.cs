@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.ServiceModel;
+using System.Threading.Tasks;
+using System.Xml;
 using CommandLine;
 using CommandLine.Text;
 
@@ -8,7 +12,7 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Verbs
     internal class GetSchema
     {
         [Option('u', "url", Required = true)]
-        public string Url { get; set; }
+        public string AcumaticaUrl { get; set; }
 
         [Option('l', "login", Default = "admin", Required = false)]
         public string Login { get; set; }
@@ -35,7 +39,7 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Verbs
                     new UnParserSettings {PreferShortName = true},
                     new GetSchema
                     {
-                        Url = "http://acumatica-host/acumatica-dir",
+                        AcumaticaUrl = "http://acumatica-host/acumatica-dir",
                         EndpointName = "Default",
                         EndpointVersion = "5.30.001",
                         Password = "<your admin password>"
@@ -43,9 +47,31 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Verbs
             }
         }
 
-        public int Invoke()
+        public async Task<int> InvokeAsync()
         {
-            throw new System.NotImplementedException();
+            using (var client = new Maintenance531.EntityMaintenanceSoapClient(new BasicHttpBinding
+            {
+                AllowCookies = true,
+                MaxReceivedMessageSize = 1024*1024,
+            }, new EndpointAddress(AcumaticaUrl + "/entity/maintenance/5.31")))
+            {
+                await client.LoginAsync(Login, Password, null, null, null).ConfigureAwait(false);
+                try
+                {
+                    var schemaText = (await client.GetSchemaAsync(EndpointVersion, EndpointName).ConfigureAwait(false)).Body.GetSchemaResult;
+                    var schema = new XmlDocument();
+                    schema.LoadXml(schemaText);
+                    using (var xmlWriter = XmlWriter.Create(Console.Out, new XmlWriterSettings {Indent = true}))
+                    {
+                        schema.WriteTo(xmlWriter);
+                    }
+                }
+                finally
+                {
+                    client.Logout();
+                }
+            }
+            return 0;
         }
     }
 }
