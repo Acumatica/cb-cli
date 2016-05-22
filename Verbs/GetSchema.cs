@@ -6,7 +6,7 @@ using System.Xml;
 using CommandLine;
 using CommandLine.Text;
 
-namespace PX.Api.ContractBase.Maintenance.Cli.Verbs
+namespace PX.Api.ContractBased.Maintenance.Cli.Verbs
 {
     [Verb("getSchema")]
     internal class GetSchema

@@ -1,6 +1,6 @@
 ﻿using CommandLine;
 
-namespace PX.Api.ContractBase.Maintenance.Cli.Verbs
+namespace PX.Api.ContractBased.Maintenance.Cli.Verbs
 {
     [Verb("putSchema")]
     internal class PutSchema

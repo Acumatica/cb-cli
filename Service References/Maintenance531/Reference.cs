@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PX.Api.ContractBase.Maintenance.Cli.Maintenance531 {
+namespace PX.Api.ContractBased.Maintenance.Cli.Maintenance531 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -17,10 +17,10 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Maintenance531 {
         
         // CODEGEN: Generating message contract since element name name from namespace http://www.acumatica.com/entity/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://www.acumatica.com/entity/Login", ReplyAction="*")]
-        PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginResponse Login(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginRequest request);
+        PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginResponse Login(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://www.acumatica.com/entity/Login", ReplyAction="*")]
-        System.Threading.Tasks.Task<PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginResponse> LoginAsync(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginRequest request);
+        System.Threading.Tasks.Task<PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginResponse> LoginAsync(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://www.acumatica.com/entity/Logout", ReplyAction="*")]
         void Logout();
@@ -30,17 +30,17 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Maintenance531 {
         
         // CODEGEN: Generating message contract since element name version from namespace http://www.acumatica.com/entity/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://www.acumatica.com/entity/GetSchema", ReplyAction="*")]
-        PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaResponse GetSchema(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaRequest request);
+        PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaResponse GetSchema(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://www.acumatica.com/entity/GetSchema", ReplyAction="*")]
-        System.Threading.Tasks.Task<PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaResponse> GetSchemaAsync(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaRequest request);
+        System.Threading.Tasks.Task<PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaResponse> GetSchemaAsync(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaRequest request);
         
         // CODEGEN: Generating message contract since element name schema from namespace http://www.acumatica.com/entity/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://www.acumatica.com/entity/PutSchema", ReplyAction="*")]
-        PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaResponse PutSchema(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaRequest request);
+        PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaResponse PutSchema(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://www.acumatica.com/entity/PutSchema", ReplyAction="*")]
-        System.Threading.Tasks.Task<PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaResponse> PutSchemaAsync(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaRequest request);
+        System.Threading.Tasks.Task<PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaResponse> PutSchemaAsync(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -50,12 +50,12 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Maintenance531 {
     public partial class LoginRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="Login", Namespace="http://www.acumatica.com/entity/", Order=0)]
-        public PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginRequestBody Body;
+        public PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginRequestBody Body;
         
         public LoginRequest() {
         }
         
-        public LoginRequest(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginRequestBody Body) {
+        public LoginRequest(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -100,12 +100,12 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Maintenance531 {
     public partial class LoginResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="LoginResponse", Namespace="http://www.acumatica.com/entity/", Order=0)]
-        public PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginResponseBody Body;
+        public PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginResponseBody Body;
         
         public LoginResponse() {
         }
         
-        public LoginResponse(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginResponseBody Body) {
+        public LoginResponse(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -127,12 +127,12 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Maintenance531 {
     public partial class GetSchemaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSchema", Namespace="http://www.acumatica.com/entity/", Order=0)]
-        public PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaRequestBody Body;
+        public PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaRequestBody Body;
         
         public GetSchemaRequest() {
         }
         
-        public GetSchemaRequest(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaRequestBody Body) {
+        public GetSchemaRequest(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -165,12 +165,12 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Maintenance531 {
     public partial class GetSchemaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSchemaResponse", Namespace="http://www.acumatica.com/entity/", Order=0)]
-        public PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaResponseBody Body;
+        public PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaResponseBody Body;
         
         public GetSchemaResponse() {
         }
         
-        public GetSchemaResponse(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaResponseBody Body) {
+        public GetSchemaResponse(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -199,12 +199,12 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Maintenance531 {
     public partial class PutSchemaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="PutSchema", Namespace="http://www.acumatica.com/entity/", Order=0)]
-        public PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaRequestBody Body;
+        public PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaRequestBody Body;
         
         public PutSchemaRequest() {
         }
         
-        public PutSchemaRequest(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaRequestBody Body) {
+        public PutSchemaRequest(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -233,12 +233,12 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Maintenance531 {
     public partial class PutSchemaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="PutSchemaResponse", Namespace="http://www.acumatica.com/entity/", Order=0)]
-        public PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaResponseBody Body;
+        public PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaResponseBody Body;
         
         public PutSchemaResponse() {
         }
         
-        public PutSchemaResponse(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaResponseBody Body) {
+        public PutSchemaResponse(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -254,12 +254,12 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Maintenance531 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface EntityMaintenanceSoapChannel : PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap, System.ServiceModel.IClientChannel {
+    public interface EntityMaintenanceSoapChannel : PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EntityMaintenanceSoapClient : System.ServiceModel.ClientBase<PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap>, PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap {
+    public partial class EntityMaintenanceSoapClient : System.ServiceModel.ClientBase<PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap>, PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap {
         
         public EntityMaintenanceSoapClient() {
         }
@@ -281,35 +281,35 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Maintenance531 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginResponse PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap.Login(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginRequest request) {
+        PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginResponse PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap.Login(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginRequest request) {
             return base.Channel.Login(request);
         }
         
         public void Login(string name, string password, string company, string branch, string locale) {
-            PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginRequest inValue = new PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginRequest();
-            inValue.Body = new PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginRequestBody();
+            PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginRequest inValue = new PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginRequest();
+            inValue.Body = new PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginRequestBody();
             inValue.Body.name = name;
             inValue.Body.password = password;
             inValue.Body.company = company;
             inValue.Body.branch = branch;
             inValue.Body.locale = locale;
-            PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginResponse retVal = ((PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap)(this)).Login(inValue);
+            PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginResponse retVal = ((PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap)(this)).Login(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginResponse> PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap.LoginAsync(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginRequest request) {
+        System.Threading.Tasks.Task<PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginResponse> PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap.LoginAsync(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginRequest request) {
             return base.Channel.LoginAsync(request);
         }
         
-        public System.Threading.Tasks.Task<PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginResponse> LoginAsync(string name, string password, string company, string branch, string locale) {
-            PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginRequest inValue = new PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginRequest();
-            inValue.Body = new PX.Api.ContractBase.Maintenance.Cli.Maintenance531.LoginRequestBody();
+        public System.Threading.Tasks.Task<PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginResponse> LoginAsync(string name, string password, string company, string branch, string locale) {
+            PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginRequest inValue = new PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginRequest();
+            inValue.Body = new PX.Api.ContractBased.Maintenance.Cli.Maintenance531.LoginRequestBody();
             inValue.Body.name = name;
             inValue.Body.password = password;
             inValue.Body.company = company;
             inValue.Body.branch = branch;
             inValue.Body.locale = locale;
-            return ((PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap)(this)).LoginAsync(inValue);
+            return ((PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap)(this)).LoginAsync(inValue);
         }
         
         public void Logout() {
@@ -321,54 +321,54 @@ namespace PX.Api.ContractBase.Maintenance.Cli.Maintenance531 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaResponse PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap.GetSchema(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaRequest request) {
+        PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaResponse PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap.GetSchema(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaRequest request) {
             return base.Channel.GetSchema(request);
         }
         
         public string GetSchema(string version, string endpoint) {
-            PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaRequest inValue = new PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaRequest();
-            inValue.Body = new PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaRequestBody();
+            PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaRequest inValue = new PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaRequest();
+            inValue.Body = new PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaRequestBody();
             inValue.Body.version = version;
             inValue.Body.endpoint = endpoint;
-            PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaResponse retVal = ((PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap)(this)).GetSchema(inValue);
+            PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaResponse retVal = ((PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap)(this)).GetSchema(inValue);
             return retVal.Body.GetSchemaResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaResponse> PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap.GetSchemaAsync(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaRequest request) {
+        System.Threading.Tasks.Task<PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaResponse> PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap.GetSchemaAsync(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaRequest request) {
             return base.Channel.GetSchemaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaResponse> GetSchemaAsync(string version, string endpoint) {
-            PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaRequest inValue = new PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaRequest();
-            inValue.Body = new PX.Api.ContractBase.Maintenance.Cli.Maintenance531.GetSchemaRequestBody();
+        public System.Threading.Tasks.Task<PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaResponse> GetSchemaAsync(string version, string endpoint) {
+            PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaRequest inValue = new PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaRequest();
+            inValue.Body = new PX.Api.ContractBased.Maintenance.Cli.Maintenance531.GetSchemaRequestBody();
             inValue.Body.version = version;
             inValue.Body.endpoint = endpoint;
-            return ((PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap)(this)).GetSchemaAsync(inValue);
+            return ((PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap)(this)).GetSchemaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaResponse PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap.PutSchema(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaRequest request) {
+        PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaResponse PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap.PutSchema(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaRequest request) {
             return base.Channel.PutSchema(request);
         }
         
         public void PutSchema(string schema) {
-            PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaRequest inValue = new PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaRequest();
-            inValue.Body = new PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaRequestBody();
+            PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaRequest inValue = new PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaRequest();
+            inValue.Body = new PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaRequestBody();
             inValue.Body.schema = schema;
-            PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaResponse retVal = ((PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap)(this)).PutSchema(inValue);
+            PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaResponse retVal = ((PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap)(this)).PutSchema(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaResponse> PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap.PutSchemaAsync(PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaRequest request) {
+        System.Threading.Tasks.Task<PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaResponse> PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap.PutSchemaAsync(PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaRequest request) {
             return base.Channel.PutSchemaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaResponse> PutSchemaAsync(string schema) {
-            PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaRequest inValue = new PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaRequest();
-            inValue.Body = new PX.Api.ContractBase.Maintenance.Cli.Maintenance531.PutSchemaRequestBody();
+        public System.Threading.Tasks.Task<PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaResponse> PutSchemaAsync(string schema) {
+            PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaRequest inValue = new PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaRequest();
+            inValue.Body = new PX.Api.ContractBased.Maintenance.Cli.Maintenance531.PutSchemaRequestBody();
             inValue.Body.schema = schema;
-            return ((PX.Api.ContractBase.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap)(this)).PutSchemaAsync(inValue);
+            return ((PX.Api.ContractBased.Maintenance.Cli.Maintenance531.EntityMaintenanceSoap)(this)).PutSchemaAsync(inValue);
         }
     }
 }

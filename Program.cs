@@ -1,8 +1,8 @@
 ﻿using System;
 using CommandLine;
-using PX.Api.ContractBase.Maintenance.Cli.Verbs;
+using PX.Api.ContractBased.Maintenance.Cli.Verbs;
 
-namespace PX.Api.ContractBase.Maintenance.Cli
+namespace PX.Api.ContractBased.Maintenance.Cli
 {
     class Program
     {
