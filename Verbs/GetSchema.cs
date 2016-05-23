@@ -11,10 +11,10 @@ namespace PX.Api.ContractBased.Maintenance.Cli.Verbs
     [Verb("getSchema")]
     internal class GetSchema
     {
-        [Option('u', "url", Required = true)]
+        [Value(0, Required = true, MetaName = "acumaticaBaseUrl")]
         public string AcumaticaUrl { get; set; }
 
-        [Option('l', "login", Default = "admin", Required = false)]
+        [Option('u', "user", Default = "admin", Required = false)]
         public string Login { get; set; }
 
         [Option('p', "pwd", Required = true)]
@@ -23,10 +23,10 @@ namespace PX.Api.ContractBased.Maintenance.Cli.Verbs
         [Option('s', "service")]
         public string ServiceVersion { get; set; }
 
-        [Value(0, Required = true, MetaName = "endpointName")]
+        [Value(1, Required = true, MetaName = "endpointName")]
         public string EndpointName { get; set; }
 
-        [Value(1, Required = true, MetaName = "endpointVersion")]
+        [Value(2, Required = true, MetaName = "endpointVersion")]
         public string EndpointVersion { get; set; }
 
         [Usage]
