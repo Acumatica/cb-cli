@@ -1,15 +1,12 @@
-﻿using System;
+﻿using CommandLine;
+using CommandLine.Text;
+using PX.Api.ContractBased.Maintenance.Cli.Utils;
+using System;
 using System.Collections.Generic;
 using System.ServiceModel;
 using System.Threading.Tasks;
 using System.Xml;
-using System.Linq;
-using System;
-using System.IO;
 using System.Xml.Linq;
-
-using CommandLine;
-using CommandLine.Text;
 
 namespace PX.Api.ContractBased.Maintenance.Cli.Verbs
 {
@@ -64,6 +61,7 @@ namespace PX.Api.ContractBased.Maintenance.Cli.Verbs
                 try
                 {
                     XDocument schema = XDocument.Parse((await client.GetSchemaAsync(EndpointVersion, EndpointName).ConfigureAwait(false)).Body.GetSchemaResult);
+                    schema.Sort();
 
                     using (var xmlWriter = XmlWriter.Create(Console.Out, new XmlWriterSettings { Indent = true }))
                     {
