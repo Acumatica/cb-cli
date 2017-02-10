@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.ServiceModel;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Linq;
+using System;
+using System.IO;
+using System.Xml.Linq;
+
 using CommandLine;
 using CommandLine.Text;
 
@@ -36,7 +41,7 @@ namespace PX.Api.ContractBased.Maintenance.Cli.Verbs
             {
                 yield return new Example(
                     "Typical usage",
-                    new UnParserSettings {PreferShortName = true},
+                    new UnParserSettings { PreferShortName = true },
                     new GetSchema
                     {
                         AcumaticaUrl = "http://acumatica-host/acumatica-dir",
@@ -52,16 +57,15 @@ namespace PX.Api.ContractBased.Maintenance.Cli.Verbs
             using (var client = new Maintenance531.EntityMaintenanceSoapClient(new BasicHttpBinding
             {
                 AllowCookies = true,
-                MaxReceivedMessageSize = 1024*1024,
+                MaxReceivedMessageSize = 1024 * 1024,
             }, new EndpointAddress(AcumaticaUrl + "/entity/maintenance/5.31")))
             {
                 await client.LoginAsync(Login, Password, null, null, null).ConfigureAwait(false);
                 try
                 {
-                    var schemaText = (await client.GetSchemaAsync(EndpointVersion, EndpointName).ConfigureAwait(false)).Body.GetSchemaResult;
-                    var schema = new XmlDocument();
-                    schema.LoadXml(schemaText);
-                    using (var xmlWriter = XmlWriter.Create(Console.Out, new XmlWriterSettings {Indent = true}))
+                    XDocument schema = XDocument.Parse((await client.GetSchemaAsync(EndpointVersion, EndpointName).ConfigureAwait(false)).Body.GetSchemaResult);
+
+                    using (var xmlWriter = XmlWriter.Create(Console.Out, new XmlWriterSettings { Indent = true }))
                     {
                         schema.WriteTo(xmlWriter);
                     }
