@@ -26,8 +26,13 @@ namespace SorterTest
 
             XElement FirstEntity = Entities.Skip(1).First();
             string[] FieldNames = FirstEntity.Element(FirstEntity.Name.Namespace + "Fields").Elements().Select(Sorter.GetName).ToArray();
-            Assert.AreEqual("CommonRef", EntNames[0]);
-            Assert.AreEqual("Result", EntNames[1]);
+            Assert.AreEqual("CommonRef", FieldNames[0]);
+            Assert.AreEqual("Result", FieldNames[1]);
+
+            string[] MappingsFields = FirstEntity.Element(FirstEntity.Name.Namespace + "Mappings").Elements().Single().Elements().Select(Sorter.GetField).ToArray();
+            Assert.AreEqual("CompanyName", MappingsFields[0]);
+            Assert.AreEqual("DisplayName", MappingsFields[1]);
+            Assert.AreEqual("Email", MappingsFields[2]);
         }
     }
 }

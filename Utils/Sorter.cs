@@ -15,19 +15,40 @@ namespace PX.Api.ContractBased.Maintenance.Cli.Utils
 
             foreach (XElement elt in Entities)
             {
-                XElement FieldsElement = elt.Element(Namespace + "Fields");
-                IEnumerable<XElement> Fields = FieldsElement.Elements().OrderBy(GetName).ToArray();
-                foreach (XElement e in Fields) e.Remove();
-                FieldsElement.Add(Fields);
+                elt.Element(Namespace + "Fields").SortFields();
+                elt.Element(Namespace + "Mappings")?.SortMapings();
 
                 elt.Remove();
             }
             root.Add(Entities);
         }
 
+        private static void SortFields(this XElement FieldsElement)
+        {
+            IEnumerable<XElement> Fields = FieldsElement.Elements().OrderBy(GetName).ToArray();
+            foreach (XElement e in Fields) e.Remove();
+            FieldsElement.Add(Fields);
+        }
+
         internal static string GetName(XElement elt)
         {
             return elt.Attribute("name").Value;
+        }
+
+        private static void SortMapings(this XElement MappingsElement)
+        {
+            IEnumerable<XElement> Mappings = MappingsElement.Elements().OrderBy(GetField).ToArray();
+            foreach (XElement e in Mappings)
+            {
+                SortMapings(e);
+                e.Remove();
+            }
+            MappingsElement.Add(Mappings);
+        }
+
+        internal static string GetField(XElement elt)
+        {
+            return elt.Attribute("field").Value;
         }
     }
 }
