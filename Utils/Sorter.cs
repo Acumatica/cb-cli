@@ -16,7 +16,7 @@ namespace PX.Api.ContractBased.Maintenance.Cli.Utils
             root.Add(Entities);
         }
 
-        private static string GetName(XElement elt)
+        internal static string GetName(XElement elt)
         {
             return elt.Attribute("name").Value;
         }
