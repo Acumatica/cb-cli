@@ -11,8 +11,17 @@ namespace PX.Api.ContractBased.Maintenance.Cli.Utils
             XElement root = original.Elements().Single();
             XNamespace Namespace = root.Name.Namespace;
 
-            List<XElement> Entities = root.Elements().Except(new[] { root.Element(Namespace + "ExtendsEndpoint") }).OrderBy(GetName).ToList();
-            foreach (XElement elt in Entities) elt.Remove();
+            IEnumerable<XElement> Entities = root.Elements().Except(new[] { root.Element(Namespace + "ExtendsEndpoint") }).OrderBy(GetName).ToArray();
+
+            foreach (XElement elt in Entities)
+            {
+                XElement FieldsElement = elt.Element(Namespace + "Fields");
+                IEnumerable<XElement> Fields = FieldsElement.Elements().OrderBy(GetName).ToArray();
+                foreach (XElement e in Fields) e.Remove();
+                FieldsElement.Add(Fields);
+
+                elt.Remove();
+            }
             root.Add(Entities);
         }
 

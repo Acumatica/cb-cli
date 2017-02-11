@@ -23,6 +23,11 @@ namespace SorterTest
             Assert.AreEqual("ErsatzDocInquiryResult", EntNames[2]);
             Assert.AreEqual("ExtLeadsInquiry", EntNames[3]);
             Assert.AreEqual("ExtLeadsInquiryResult", EntNames[4]);
+
+            XElement FirstEntity = Entities.Skip(1).First();
+            string[] FieldNames = FirstEntity.Element(FirstEntity.Name.Namespace + "Fields").Elements().Select(Sorter.GetName).ToArray();
+            Assert.AreEqual("CommonRef", EntNames[0]);
+            Assert.AreEqual("Result", EntNames[1]);
         }
     }
 }
