@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Endpoint name="Sample1" version="5.30.001" xmlns="http://www.acumatica.com/entity/maintenance/5.31" systemContractVersion="1">
+  <ExtendsEndpoint name="Default" version="5.30.001" />
+  <TopLevelEntity name="ExtLeadsInquiry" screen="CR3010PL">
+    <Fields>
+      <Field name="Result" type="ExtLeadsInquiryResult[]" />
+    </Fields>
+    <Mappings>
+      <Mapping field="Result">
+        <Mapping field="DisplayName">
+          <To object="Results" field="Contact_displayName" />
+        </Mapping>
+        <Mapping field="Email">
+          <To object="Results" field="Contact_eMail" />
+        </Mapping>
+        <Mapping field="CompanyName">
+          <To object="Results" field="Contact_fullName" />
+        </Mapping>
+      </Mapping>
+    </Mappings>
+  </TopLevelEntity>
+  <Detail name="ExtLeadsInquiryResult">
+    <Fields>
+      <Field name="DisplayName" type="StringValue" />
+      <Field name="Email" type="StringValue" />
+      <Field name="CompanyName" type="StringValue" />
+    </Fields>
+  </Detail>
+  <TopLevelEntity name="ErsatzDoc" screen="CR3010PL">
+    <Fields>
+      <Field name="Result" type="ErsatzDocInquiryResult[]" />
+      <Field name="CommonRef" type="StringValue" />
+    </Fields>
+    <Mappings>
+      <Mapping field="Result">
+        <Mapping field="DisplayName">
+          <To object="Results" field="Contact_displayName" />
+        </Mapping>
+        <Mapping field="Email">
+          <To object="Results" field="Contact_eMail" />
+        </Mapping>
+        <Mapping field="CompanyName">
+          <To object="Results" field="Contact_fullName" />
+        </Mapping>
+      </Mapping>
+    </Mappings>
+  </TopLevelEntity>
+  <Detail name="ErsatzDocInquiryResult">
+    <Fields>
+      <Field name="DisplayName" type="StringValue" />
+      <Field name="Email" type="StringValue" />
+      <Field name="CompanyName" type="StringValue" />
+    </Fields>
+  </Detail>
+</Endpoint>
