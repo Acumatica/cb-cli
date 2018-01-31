@@ -15,7 +15,7 @@ namespace PX.Api.ContractBased.Maintenance.Cli.Utils
 
             foreach (XElement elt in Entities)
             {
-                elt.Element(Namespace + "Fields").SortFields();
+                elt.Element(Namespace + "Fields")?.SortFields();
                 elt.Element(Namespace + "Mappings")?.SortMapings();
 
                 elt.Remove();
