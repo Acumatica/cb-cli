@@ -1,8 +1,9 @@
-﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.ServiceModel;
 using System.Threading.Tasks;
+using Acumatica.RESTClient.AuthApi;
+using Acumatica.RESTClient.Client;
+using Acumatica.RESTClient.MaintenanceApi;
 using CommandLine;
 using CommandLine.Text;
 
@@ -45,13 +46,11 @@ namespace PX.Api.ContractBased.Maintenance.Cli.Verbs
 
         public async Task<int> InvokeAsync()
         {
-            using (var client = new Maintenance531.EntityMaintenanceSoapClient(new BasicHttpBinding
+            using (var client = new ApiClient(AcumaticaUrl))
             {
-                AllowCookies = true,
-                MaxReceivedMessageSize = 1024*1024,
-            }, new EndpointAddress(AcumaticaUrl + "/entity/maintenance/5.31")))
-            {
+#pragma warning disable CS0618 // username/password Login is obsolete in favor of OAuth 2.0, but it is what this tool's -u/-p syntax needs
                 await client.LoginAsync(Login, Password, null, null, null).ConfigureAwait(false);
+#pragma warning restore CS0618
                 try
                 {
                     await client.PutSchemaAsync(File.ReadAllText(EndpointDefinitionFile)).ConfigureAwait(false);
